@@ -1,0 +1,5 @@
+.env
+bin
+vendor
+tmp
+node_modules
