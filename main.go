@@ -14,17 +14,16 @@ import (
 )
 
 func main() {
-	db,err := db.ConnectDB()
+	db, err := db.ConnectDB()
 	if err != nil {
 		slog.Error(err.Error())
 	}
 	defer db.Close()
-	// init services,records
+	// init services,records {Bootstrap}
 	studentRecord := records.NewStudentRecord(db)
 	studentService := services.NewStudentService(studentRecord)
 	studentHanler := handlers.NewStudentHandler(studentService)
-	
-	
+
 	router := chi.NewMux()
 	router.Use(middleware.Recoverer)
 	// handle static assets
@@ -32,7 +31,7 @@ func main() {
 	//web routes
 	router.Get("/", handlers.Make(handlers.HandleHome))
 	// student Routes
-	router.Get("/students",handlers.Make(studentHanler.Index))
+	router.Get("/students", handlers.Make(studentHanler.Index))
 	srv := http.Server{
 		Addr:    ":8000",
 		Handler: router,
