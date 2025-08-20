@@ -4,3 +4,4 @@ vendor
 tmp
 node_modules
 *_templ.go
+public/css
