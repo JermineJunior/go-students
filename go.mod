@@ -3,7 +3,7 @@ module github.com/JermaineJunior/goStudents
 go 1.24.0
 
 require (
-	github.com/a-h/templ v0.3.857
+	github.com/a-h/templ v0.3.943
 	github.com/go-chi/chi/v5 v5.2.1
 	github.com/mattn/go-sqlite3 v1.14.24
 )
