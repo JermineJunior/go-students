@@ -30,6 +30,7 @@ func main() {
 	router.Handle("/public/*", public())
 	//web routes
 	router.Get("/", handlers.Make(handlers.HandleHome))
+	router.NotFound(handlers.Make(handlers.HandleNotFound))
 	// student Routes
 	router.Get("/students", handlers.Make(studentHanler.Index))
 	srv := http.Server{

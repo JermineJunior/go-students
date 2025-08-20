@@ -1,5 +1,6 @@
 package layouts
 
+import "github.com/JermaineJunior/goStudents/views/components"
 
 templ App(title string) {
 	<!DOCTYPE html>
@@ -10,11 +11,9 @@ templ App(title string) {
 			<link rel="stylesheet" href="/public/css/app.css"/>
 			<title>Student Managment|{ title }</title>
 		</head>
-		<body class="bg-gray-900 text-white">
-			<header class="h-16 px-4 border-b border-b-gray-500">	
-				<nav class="px-3 py-6 text-lg">
-						<a href="#" class="">Home</a>
-				</nav>
+		<body class="bg-gray-800 text-white">
+			<header class="">
+				@components.NavBar()
 			</header>
 			<main class="container my-9 mx-auto">
 				{ children... }

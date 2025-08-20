@@ -10,7 +10,7 @@ import templruntime "github.com/a-h/templ/runtime"
 
 import "github.com/JermaineJunior/goStudents/views/layouts"
 
-func Home() templ.Component {
+func NotFound() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -43,9 +43,13 @@ func Home() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<section class=\"bg-gray-800 flex items-center justify-center \"><div class=\"container flex items-center justify-center min-h-screen px-6 py-2 mx-auto\"><div><p class=\"text-sm font-medium  dark:text-blue-400\">404 error</p><h1 class=\"my-2 text-2xl font-semibold  dark:text-white md:text-3xl\">We can’t find that page</h1><p class=\"dark:text-gray-400\">Sorry, the page you are looking for doesn't exist or has been moved.</p><div class=\"flex items-center mt-4 gap-x-3\"><button class=\"flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-200 transition-colors duration-200 border rounded-lg gap-x-2 sm:w-auto hover:bg-gray-800 bg-gray-900 hover:bg-gray-100 text-gray-200 border-gray-700\"><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"w-5 h-5 rtl:rotate-180\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18\"></path></svg> <span>Go back</span></button> <a href=\"/\" class=\"w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 rounded-lg shrink-0 sm:w-auto  hover:bg-blue-500 bg-blue-600\">Take me home</a></div></div></div></section>")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
 			return nil
 		})
-		templ_7745c5c3_Err = layouts.App("").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = layouts.App("404").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
