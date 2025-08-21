@@ -14,6 +14,6 @@ func HandleHome(w http.ResponseWriter, r *http.Request) error {
 	}
 	return nil
 }
-func HandleNotFound(w http.ResponseWriter,r *http.Request) error {
-	return Render(w,r,pages.NotFound())
+func HandleNotFound(w http.ResponseWriter, r *http.Request) error {
+	return Render(w, r, pages.NotFound())
 }

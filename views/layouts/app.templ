@@ -4,14 +4,14 @@ import "github.com/JermaineJunior/goStudents/views/components"
 
 templ App(title string) {
 	<!DOCTYPE html>
-	<html lang="en">
+	<html lang="en" data-theme="cupcake">
 		<head>
 			<meta charset="UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			<link rel="stylesheet" href="/public/css/app.css"/>
 			<title>Student Managment|{ title }</title>
 		</head>
-		<body class="bg-gray-800 text-white">
+		<body class="antialiased">
 			<header class="">
 				@components.NavBar()
 			</header>
