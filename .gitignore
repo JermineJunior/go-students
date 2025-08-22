@@ -2,6 +2,14 @@
 bin
 vendor
 tmp
+*.log
 node_modules
 views/*_templ.go
+*_templ.go
 public/css
+
+.vscode
+.idea
+.fleet
+.zed
+

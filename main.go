@@ -25,6 +25,7 @@ func main() {
 	studentHanler := handlers.NewStudentHandler(studentService)
 
 	router := chi.NewMux()
+	router.Use(middleware.Logger)
 	router.Use(middleware.Recoverer)
 	// handle static assets
 	router.Handle("/public/*", public())
